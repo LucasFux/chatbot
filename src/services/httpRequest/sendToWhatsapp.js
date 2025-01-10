@@ -2,7 +2,7 @@ import axios from "axios";
 import config from '../../config/env.js';
 
 const sendToWhatsapp = async (data) => {
-    const baseUrl = `https://graph.facebook.com/${config.API_VERSION}/${config.BUSINESS_PHONE}/messages`;
+    const baseUrl = `${config.BASE_URL}/${config.API_VERSION}/${config.BUSINESS_PHONE}/messages`;
     const headers = {
         Authorization: `Bearer ${config.API_TOKEN}`,
     };
