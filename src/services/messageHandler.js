@@ -81,7 +81,8 @@ async handleOptionsMenu(to, option){
   let response;
   switch(option) {
     case 'ingreso':
-      response = 'Todavía no esta funcionando esta opción. Volvé a envíar "hi" para cargar un egreso';
+      response = `Todavía no esta funcionando esta opción.
+      Volvé a envíar "hi" para cargar un egreso`;
       break;
     case 'egreso':
       this.addExpenseState[to]={step: 'concept'}
@@ -120,7 +121,7 @@ completeNewExpense(to){
 }
 
 isCategoriesOptions(message){
-  const categoriesOptions = ["1", "2","3","4"];
+  const categoriesOptions = ["1", "2","3","4", "5", "6", "7", "8"];
   return categoriesOptions.includes(message);
 }
 
@@ -149,6 +150,7 @@ async addNewExpense(to, message){
             5- Taxi/Uber
             6- Cole Urbano
             7- Colectivo
+            8- Otro
             `;
         }
         break;
